@@ -9,8 +9,7 @@ ip_address = input("Masukkan Alamat IP (IP Address) : ")
 
 # 2. Menangkap Input Angka & Konversi Tipe Data
 jumlah_port = int(input("Masukkan Jumlah Port Router : "))
-kecepatan_link = float(input("Masukkan Kecepatan Bandwidth(Mbps): "))
-
+kecepatan_link = float(input("Masukkan Kecepatan Bandwidth(Mbps): ")) 
 # 3. Variabel Boolean Default
 status_aktif = True
 
