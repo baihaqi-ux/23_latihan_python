@@ -1,0 +1,5 @@
+nilai = 90
+if nilai >=80:
+    print("selamat, Anda Lulus! ")
+else:
+    print("Maaf, Anda tidak lulus.")
