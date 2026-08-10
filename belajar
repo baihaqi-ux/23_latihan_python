@@ -1,0 +1,23 @@
+welcome_message = "WELCOME TO HAKI GAME"
+haki_posisi = 3
+print("**********")
+
+print("**********")
+print(f"**{welcome_message} **")
+print("***********")
+
+nama_user = input("Masukkan nama kamu: ")
+
+print(f'''Halo{nama_user} Coba Perhatikan goa dibawah ini
+l_l l_l l_l l_l
+''')
+
+pilihan_user =input("menurut kamu haki ada dimana[1 / 2 / 3 / 4]")
+
+print(f"Pilihan kamu adalah {pilihan_user}")
+
+if pilihan_user == str(haki_posisi):
+    print("Selamat kamu menemukan HAKI")
+else:
+    print("Maaf kamu tidak menemukan Haki, di goa itu")
+    

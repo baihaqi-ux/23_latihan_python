@@ -1,0 +1,15 @@
+while True:
+    while True:
+    perintah = input("\nTekan [ENTER] untuk hitung 1-10 (atau ketik 'n' untuk keluar): ")
+    
+    # Pintu keluar jika user mengetik 'n'
+    if perintah.lower() == 'n':
+        print("Program selesai!")
+        break
+    
+
+
+    # Proses perulangan menghitung 1-10
+    print("Menghitung")
+    for i in range(1, 11):
+        print(i)
