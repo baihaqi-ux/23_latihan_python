@@ -1,19 +1,51 @@
 print("======================GANJIL GENAP DAN PRIMA====================")
-while True:
-    input_user = input("Masukkan angka (atau ketik 'keluar' untuk berhenti): ")
+import os
+print(os.system("cls"))
 
-    # Pintu keluar untuk menghentikan program
-    if input_user.lower() == 'keluar':
-        print("Program dihentikan. Selesai!")
-        break
+print("<============ Program untuk menentukan GANJIL/GENAP ============>")
 
-    # Memastikan bahwa yang diinput adalah angka
-    if input_user.isdigit():
-        angka = int(input_user)
-        # Pengecekan Ganjil / Genap
+def ganjil_genap():
+    while True:
+        angka = int(input("Masukkan bilangan yang akan diperiksa: "))
+        
         if angka % 2 == 0:
-            print(f"-> Angka {angka} adalah GENAP\n")
+            print(angka, "adalah bilangan genap 🟢")
         else:
-            print(f"-> Angka {angka} adalah GANJIL\n")
-    else:
-        print(" Harap masukkan angka yang valid!\n")
+            print(angka, "adalah bilangan ganjil 🔴")
+            
+        if input("\nApakah ingin memeriksa bilangan lain? (Y/N):").upper() == "N":
+            print("Terima kasih telah menggunakan program ini.")
+            print("================================================================")
+            break
+        else:
+            continue
+
+
+def cek_prima():
+    while True:
+        angka = int(input("Masukkan bilangan yang akan diperiksa: "))
+
+        if angka < 2:
+            print(angka, "bukan bilangan prima")
+        else:
+            prima = True
+
+            for pembagi in range(2, int(angka ** 0.5) + 1):
+                if angka % pembagi == 0:
+                    prima = False
+                    break
+
+            if prima:
+                print(angka, "adalah bilangan prima")
+            else:
+                print(angka, "bukan bilangan prima")
+
+        if input("\nApakah ingin memeriksa bilangan lain? (Y/N): ").upper() == "N":
+            print("Terima kasih telah menggunakan program ini.")
+            break
+
+
+cek_prima()
+
+
+ganjil_genap()
