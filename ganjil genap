@@ -1,9 +1,3 @@
-int(input("Masukkan sebuah angka: "))
-if angka % 2 == 0:
-    print(f"Angka {angka} adalah GENAP")
-else:
-    print(f"Angka {angka} adalah GANJIL")
-
 while True:
     perintah = input("\nTekan [ENTER] untuk menghitung atau ketik 'n' untuk keluar: ")
 
