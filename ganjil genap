@@ -1,3 +1,4 @@
+print("======================GANJIL GENAP DAN PRIMA====================")
 while True:
     input_user = input("Masukkan angka (atau ketik 'keluar' untuk berhenti): ")
 
