@@ -1,13 +1,18 @@
 while True:
-    perintah = input("\nTekan [ENTER] untuk menghitung atau ketik 'n' untuk keluar: ")
+    input_user = input("Masukkan angka (atau ketik 'keluar' untuk berhenti): ")
 
-    if perintah.lower() == "n":
-        print("Program selesai!")
+    # Pintu keluar untuk menghentikan program
+    if input_user.lower() == 'keluar':
+        print("Program dihentikan. Selesai!")
         break
 
-    angka = int(input("Masukkan sebuah angka: "))
-
-    if angka % 2 == 0:
-        print(f"{angka} adalah GENAP")
+    # Memastikan bahwa yang diinput adalah angka
+    if input_user.isdigit():
+        angka = int(input_user)
+        # Pengecekan Ganjil / Genap
+        if angka % 2 == 0:
+            print(f"-> Angka {angka} adalah GENAP\n")
+        else:
+            print(f"-> Angka {angka} adalah GANJIL\n")
     else:
-        print(f"{angka} adalah GANJIL")
+        print(" Harap masukkan angka yang valid!\n")
