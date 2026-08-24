@@ -1,0 +1,13 @@
+while True:
+    perintah = input("\nTekan [ENTER] untuk menghitung atau ketik 'n' untuk keluar: ")
+
+    if perintah.lower() == "n":
+        print("Program selesai!")
+        break
+
+    angka = int(input("Masukkan sebuah angka: "))
+
+    if angka % 2 == 0:
+        print(f"{angka} adalah GENAP")
+    else:
+        print(f"{angka} adalah GANJIL")
