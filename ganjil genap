@@ -11,3 +11,4 @@ while True:
         print(f"{angka} adalah GENAP")
     else:
         print(f"{angka} adalah GANJIL")
+
