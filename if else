@@ -1,5 +1,119 @@
-nilai = int(input("Masukkan sebuah angka: "))
-if nilai >= 80:
-    print("selamat, Anda Lulus! ")
-else:
-    print("Maaf, Anda tidak lulus.")
+#!/usr/bin/env python3
+"""
+Program Hitung Bangun Datar
+Menghitung luas dan keliling berbagai bangun datar.
+"""
+
+import math
+
+
+def persegi():
+    sisi = float(input("Sisi: "))
+    luas = sisi * sisi
+    keliling = 4 * sisi
+    print(f"Luas = {luas}")
+    print(f"Keliling = {keliling}")
+
+
+def persegi_panjang():
+    p = float(input("Panjang: "))
+    l = float(input("Lebar: "))
+    luas = p * l
+    keliling = 2 * (p + l)
+    print(f"Luas = {luas}")
+    print(f"Keliling = {keliling}")
+
+
+def segitiga():
+    alas = float(input("Alas: "))
+    tinggi = float(input("Tinggi: "))
+    sisi_a = float(input("Sisi A: "))
+    sisi_b = float(input("Sisi B: "))
+    sisi_c = float(input("Sisi C: "))
+    luas = 0.5 * alas * tinggi
+    keliling = sisi_a + sisi_b + sisi_c
+    print(f"Luas = {luas}")
+    print(f"Keliling = {keliling}")
+
+
+def lingkaran():
+    jari = float(input("Jari-jari: "))
+    luas = math.pi * jari * jari
+    keliling = 2 * math.pi * jari
+    print(f"Luas = {luas:.2f}")
+    print(f"Keliling = {keliling:.2f}")
+
+
+def trapesium():
+    sisi_a = float(input("Sisi sejajar A: "))
+    sisi_b = float(input("Sisi sejajar B: "))
+    tinggi = float(input("Tinggi: "))
+    sisi_c = float(input("Sisi miring C: "))
+    sisi_d = float(input("Sisi miring D: "))
+    luas = 0.5 * (sisi_a + sisi_b) * tinggi
+    keliling = sisi_a + sisi_b + sisi_c + sisi_d
+    print(f"Luas = {luas}")
+    print(f"Keliling = {keliling}")
+
+
+def jajar_genjang():
+    alas = float(input("Alas: "))
+    tinggi = float(input("Tinggi: "))
+    sisi_miring = float(input("Sisi miring: "))
+    luas = alas * tinggi
+    keliling = 2 * (alas + sisi_miring)
+    print(f"Luas = {luas}")
+    print(f"Keliling = {keliling}")
+
+
+def belah_ketupat():
+    d1 = float(input("Diagonal 1: "))
+    d2 = float(input("Diagonal 2: "))
+    sisi = float(input("Panjang sisi: "))
+    luas = 0.5 * d1 * d2
+    keliling = 4 * sisi
+    print(f"Luas = {luas}")
+    print(f"Keliling = {keliling}")
+
+
+def show_menu():
+    print("\n=== HITUNG BANGUN DATAR ===")
+    print("1. Persegi")
+    print("2. Persegi Panjang")
+    print("3. Segitiga")
+    print("4. Lingkaran")
+    print("5. Trapesium")
+    print("6. Jajar Genjang")
+    print("7. Belah Ketupat")
+    print("8. Keluar")
+
+
+def main():
+    menu_actions = {
+        "1": persegi,
+        "2": persegi_panjang,
+        "3": segitiga,
+        "4": lingkaran,
+        "5": trapesium,
+        "6": jajar_genjang,
+        "7": belah_ketupat,
+    }
+
+    while True:
+        show_menu()
+        choice = input("Pilih bangun datar: ").strip()
+        if choice == "8":
+            print("Sampai jumpa!")
+            break
+        action = menu_actions.get(choice)
+        if action:
+            try:
+                action()
+            except ValueError:
+                print("Input harus berupa angka.")
+        else:
+            print("Pilihan tidak valid.")
+
+
+if __name__ == "__main__":
+    main()
