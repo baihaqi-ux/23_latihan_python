@@ -22,7 +22,7 @@ def prima():
         angka = int(input("Masukkan bilangan yang akan diperiksa: "))
 
         if angka < 2:
-            print(angka, "bukan bilangan prima 🔴")
+            print(angka, "bukan bilangan prima ")
         else:
             prima = True
 
@@ -32,9 +32,9 @@ def prima():
                     break
 
             if prima:
-                print(angka, "adalah bilangan prima 🟢")
+                print(angka, "adalah bilangan prima ")
             else:
-                print(angka, "bukan bilangan prima 🔴")
+                print(angka, "bukan bilangan prima ")
 
         if input("\nApakah ingin memeriksa bilangan lain? (Y/N): ").upper() == "N":
             print("Terima kasih telah menggunakan program ini.")

@@ -7,7 +7,7 @@ def clear_screen():
 clear_screen()
 
 while True:
-    print("<============ SELAMAT DATANG PADA PROGRAM BANGUN DATAR/BILANGAN ============>\n")
+    print("<============ SELAMAT DATANG PADA PROGRAM BANGUN DATAR/BILANGAN MATEMATIKA ============>\n")
     program = input("Masukan Program yang ingin dijalankan\n Check Bilangan = 1\n Check Bangun Datar = 2\n Pilihan Anda: ")
     if program == "1":
         print("<============ Program Matematika ============>\n")
