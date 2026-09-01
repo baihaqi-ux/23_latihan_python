@@ -1,27 +1,36 @@
-from ganjilgenap import cek_ganjil_genap
-from ifelse import cek_kelulusan
-from perkaliandanpembagian import hitung
-from bangundatar import hitung_bangun_datar
+import os
+import ModulMatematika as math
+import ModulBangunDatar as bd
+def clear_screen():
+    os.system("cls")
 
+clear_screen()
 
-def main():
-    print("=== PROGRAM UTAMA ===")
-    print("1. Cek Ganjil/Genap")
-    print("2. Cek Kelulusan")
-    print("3. Perkalian & Pembagian")
-    print("4. Bangun Datar")
-    pilihan = input("Pilih menu: ")
-    if pilihan == "1":
-        cek_ganjil_genap()
-    elif pilihan == "2":
-        cek_kelulusan()
-    elif pilihan == "3":
-        hitung()
-    elif pilihan == "4":
-        hitung_bangun_datar()
-    else:
-        print("Pilihan tidak valid.")
-
-
-if __name__ == "__main__":
-    main()
+while True:
+    print("<============ SELAMAT DATANG PADA PROGRAM BANGUN DATAR/BILANGAN ============>\n")
+    program = input("Masukan Program yang ingin dijalankan\n Check Bilangan = 1\n Check Bangun Datar = 2\n Pilihan Anda: ")
+    if program == "1":
+        print("<============ Program Matematika ============>\n")
+        program_mat = input("Masukan Program yang ingin dijalankan\n Check Bilangan Prima = 1\n Check Bilangan Ganjil/Genap = 2\n Pilihan Anda: ")
+        if program_mat == "1":
+            math.prima()
+        elif program_mat == "2":
+            math.ganjil_genap()
+        else:
+            print("Program tidak dikenal.")
+            break
+    elif program == "2":
+        print("<============ Program Bangun Datar ============>\n")
+        program_bd = input("Masukan Program yang ingin dijalankan\n Check Nilai Segitiga = 1\n Check Nilai Persegi = 2\n Check Nilai Persegi Panjang = 3\n Check NilaiLingkaran = 4\n Pilihan Anda: ")
+        if program_bd == "1":
+            bd.segitiga()
+        elif program_bd == "2":
+            bd.persegi()
+        elif program_bd == "3":
+            bd.persegi_panjang()
+        elif program_bd == "4":
+            bd.lingkaran()
+        else:
+            print("Program tidak dikenal.")
+            break
+        
